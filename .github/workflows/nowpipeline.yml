@@ -33,7 +33,7 @@ jobs:
           versionTemplate: 1.1
           versionFormat: template
           # Optional, add +X to version number. Default: 1 
-          # incrementBy: X
+          incrementBy: 1
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}
@@ -67,7 +67,7 @@ jobs:
           version: ${{ needs.build.outputs.publishversion }}
           # Only applicable if Application Customization is active. 
           # Version of the base application on which to apply the customizations
-          baseAppVersion: '1.2.3'
+          baseAppVersion: '1.1.0'
           # Only applicable if Application Customization is active and the associated 
           # application is a higher version than the currently installed version
           # Default: false
@@ -123,7 +123,7 @@ jobs:
           version: ${{ needs.test.outputs.publishversion }}
           # Only applicable if Application Customization is active. 
           # Version of the base application on which to apply the customizations
-          baseAppVersion: '1.2.3'
+          baseAppVersion: '1.1.0'
           # Only applicable if Application Customization is active and the associated 
           # application is a higher version than the currently installed version
           # Default: false
