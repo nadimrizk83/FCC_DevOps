@@ -19,7 +19,7 @@ jobs:
     steps:
 
       - name: ServiceNow CI/CD Apply Changes
-        uses: nadimrizk83/sncicd-apply-changes@1.2.1
+        uses: nadimrizk83/sncicd-apply-changes@1.0.0
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}
