@@ -28,16 +28,16 @@ jobs:
 
       - name: ServiceNow CI/CD Publish App
         id: publish_app
-        uses: ServiceNow/sncicd-publish-app@1.1.0
+        uses: nadimrizk83/sncicd-publish-app@v1.0.0
         with:
           #versionTemplate: 1.1
           versionFormat: detect
           # Optional, add +X to version number. Default: 1 
           #incrementBy: 1
         env:
-          snowUsername: ${{ secrets.SN_USERNAME }}
-          snowPassword: ${{ secrets.SN_PASSWORD }}
-          snowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
+          nowUsername: ${{ secrets.SN_USERNAME }}
+          nowPassword: ${{ secrets.SN_PASSWORD }}
+          nowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
           
     # This is required to pass the version number output from Publish App 
